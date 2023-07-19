@@ -3,11 +3,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { BlogsModule } from './blogs/blogs.module';
 
 @Module({
   imports: [
     AuthModule,
-    MongooseModule.forRoot("mongodb://mongo:gotG4SNDH970XwmkYEJt@containers-us-west-53.railway.app:6964"),
+    MongooseModule.forRoot('mongodb+srv://ilker:3G2MKxuRb2zkOadf@blogdb.1it0d0i.mongodb.net/'),
+    BlogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
